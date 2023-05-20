@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido</title>
+    <link rel="stylesheet" href="./src/css/userStyle.css">
+    <link rel="stylesheet" href="./src/css/reset.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="navLinea">
+                <div>
+                    <a href="./index.html"><img src="./src/img/logo.webp" alt="" srcset=""></a>
+                </div>
+                <div class="menuToogle" style="width: 75%">
+                    <div><button><ion-icon name="options-outline"></ion-icon></button></div>
+                </div>
+                <div class="iconoPerfil" style="justify-content: center;"><ion-icon name="person-circle-outline" style="font-size: 3em;""></ion-icon></div>
+                    <div class="navegacion">
+                    <div class="menuToogle"></div>
+                        <ul>
+                            <li class="list " style=" --clr: #f57905c9;">
+                                <a href="./index.php">
+                                    <span class="icon">
+                                        <ion-icon name="home-outline"></ion-icon>
+                                    </span>
+                                    <span class="text">Inicio</span>
+                                </a>
+                            </li>
+                            <li class="list" style="--clr:#f57905c9;">
+                                <a href="./404.html">
+                                    <span class="icon">
+                                        <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
+                                    </span>
+                                    <span class="text">Sugerencias</span>
+                                </a>
+                            </li>
+                            <li class="list" style="--clr:#f57905c9;">
+                                <a href="#quinto">
+                                    <span class="icon">
+                                        <ion-icon name="contrast-outline"></ion-icon>
+                                    </span>
+                                    <span class="text" style="text-align: left;">Modo claro/oscuro</span>
+                                </a>
+                            </li>
+                            <li class="list" style="--clr:#f57905c9;">
+                                <a href="./src/login.php">
+                                    <span class="icon">
+                                        <ion-icon name="people-circle-outline"></ion-icon>
+                                    </span>
+                                    <span class="text">Inicio de Sesion</span>
+                                </a>
+                            </li>
+                        </ul>
+                </div>
+            </div>
+        </nav>
+        <main>
+            <div class="columnaChatDisponibles">
+            <details open>
+                <summary class="claseChat active"><img class="imagenChat" src="./src/img/chatgpt.webp" alt="" srcset=""><div class="contenedorChat"><div class="nombreChat">ChatGPT</div><div id="contadorChatGPT" class="cantChats">0 chats</div></div></summary>
+                <a href="#" class="myButton" id="btnAgregarCodigo">Nuevo Chat</a>
+                <div id="contenedorCodigo"></div>
+            </details>
+            <details>
+                <summary class="claseChat"><img class="imagenChat" src="./src/img/Bard.webp" alt="" srcset=""><div class="contenedorChat"><div class="nombreChat">Bard</div><div id="contadorBard"class="cantChats">0 chats</div></div></summary>
+                <a href="#" class="myButton" id="btnAgregarCodigoDos">Nuevo Chat</a>
+                <div id="contenedorCodigoDos"></div>
+            </details>
+            <details>
+                <summary class="claseChat"><img class="imagenChat" src="./src/img/aichatbot.webp" alt="" srcset=""><div class="contenedorChat"><div class="nombreChat">AIChat</div><div id="contadorAIChat"class="cantChats">0 chats</div></div></summary>
+                <a href="#" class="myButton" id="btnAgregarCodigoTres">Nuevo Chat</a>
+                <div id="contenedorCodigoTres"></div>
+            </details>
+            <details>
+                <summary class="claseChat"><img class="imagenChat" src="./src/img/quizcat.webp" alt="" srcset=""><div class="contenedorChat"><div class="nombreChat">QuizCat</div><div id="contadorQuizCat" class="cantChats">0 chats</div></div></summary>
+                <a href="#" class="myButton" id="btnAgregarCodigoCuatro">Nuevo Chat</a>
+                <div id="contenedorCodigoCuatro"></div>
+            </details>
+            <details>
+                <summary class="claseChat"><img class="imagenChat" src="./src/img/silky.webp" alt="" srcset=""><div class="contenedorChat"><div class="nombreChat">Silky</div><div id="contadorSilky"class="cantChats">0 chats</div></div></summary>
+                <a href="#" class="myButton" id="btnAgregarCodigoCinco">Nuevo Chat</a>
+                <div id="contenedorCodigoCinco"></div>
+            </details>
+            </div>
+            <div class="ColumnaChat">
+                <a href="./index.php">
+                    <img src="./src/img/icono logo.webp" alt="">
+                  </a>
+                <div class="zonaChat">
+                    <div class="contenedorResultadoChat">
+                        <div id="resultadoChat">
+                            <div class="cuadroResultadoChat">
+                                bienvenido al chat con ChatGPT 4.0 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="zonaEscritura">
+                    <input type="text" class="cuadroEscritura" id="mensajeInput">
+                    <button id="Enviar" class="btnEnviar" onclick="enviarMensaje()"><ion-icon name="rocket-outline"></ion-icon></button>
+                </div>
+            </div>
+        </main>
+    </header>  
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="./src/js/scriptUserPage.js"></script>
+</body>
+</html>

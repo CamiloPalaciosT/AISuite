@@ -1,0 +1,438 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+body{
+    font-family: 'Poppins', sans-serif;
+}
+header{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content:space-around;
+}
+/*-------Menu Superior-------*/
+nav{
+    width: 100%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+nav img{
+    width: 100%;
+}
+.navLinea{
+    display: flex;
+    align-items: center;
+}
+.navLinea div:first-child img {
+    justify-content: start;
+    width: 100%;
+    display: flex;
+    cursor: pointer;
+}
+.navLinea div:not(:first-child) {
+    align-items: center;
+    width: 20%;
+    padding-left: 3%;
+}
+.navLinea div {
+    width: 25%;
+    justify-content: flex-end;
+    display: flex;
+}
+.navLinea div:not(:first-child) ion-icon {
+    font-size: 30px;
+}
+.navLinea div{
+    width: 25%;
+    justify-content: end;
+    display: flex;
+    margin-right: 1%;
+}
+
+/*------------menu navegacion ------------*/
+.navegacion {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+    position: fixed;
+    right: 6%;
+    top: 13%;
+    width: 75px;
+    background: white;
+    transition: 0.5s;
+    display: flex;
+    justify-content:end;
+    align-items: flex-end;
+    border-radius: 15px;
+    z-index: 2;
+    visibility: visible;   /* importante */
+  }
+  .navegacion.open {
+    width: 192px;
+    visibility: visible;
+    display: flex;
+    align-content: space-around;
+    flex-wrap: wrap;
+  }
+  /*---boton menu -----*/
+  /*-------boton menu-------*/
+  .navegacion ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    margin-top: 9%;
+    margin-left: 0%;
+  }
+  .navegacion ul li {
+    list-style: none;
+    position: relative;
+    width: 100%;
+    height: 60px;
+    transition: 0.5s;
+  }
+  .navegacion ul li.active {
+    transform: translatey(20px);
+  }
+  .navegacion ul li.active a .icon {
+    color: #fff;
+    background: var(--clr);
+  }
+  .navegacion ul li.active a .icon::before {
+    opacity: 0.5;
+  }
+  .navegacion ul li.active a .text {
+    color: var(--clr);
+  }
+  .navegacion ul li a {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    text-decoration: none;
+  }
+  .navegacion ul li a .icon {
+    position: relative;
+    display: block;
+    min-width: 55px;
+    height: 55px;
+    line-height: 60px;
+    transition: 0.5s;
+    border-radius: 10px;
+    font-size: 1.75em;
+    color: #222;
+  }
+  .navegacion ul li a .icon::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--clr);
+    filter: blur(8px);
+    opacity: 0;
+    transition: 0.5s;
+  }
+  .navegacion ul li a .text {
+    position: relative;
+    padding: 0 15px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    color: #333;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+  }
+  .navegacion ul li a .icon {
+    opacity: 0;
+    visibility: hidden;
+
+  }
+  
+  .navegacion.open ul li.active {
+    transform: translateX(15px);
+  }
+  .navegacion.open ul li a .text {
+    visibility: visible;
+    opacity: 1;
+    
+  }
+  .navegacion.open ul li a .icon {
+    opacity: 1;
+    visibility: visible;
+
+  }
+/*-----------------ocultar y mostar menu--------------------*/
+    .navegacion{
+      opacity: 1;
+      pointer-events: auto;
+      visibility: hidden;
+    }
+/*--------MAIN(cuerpo del chat)----------*/
+main{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 2%;
+}
+/*-------acordeon de chats ---------*/
+.columnaChatDisponibles{
+    flex-basis: 25%;
+    width: 100%;
+    height: 30em;
+    overflow: auto;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+.columnaChatDisponibles::-webkit-scrollbar {
+    width: 10px;
+    background-color: rgb(250, 249, 247);
+}
+
+.columnaChatDisponibles::-webkit-scrollbar-thumb {
+    background-color: #f3ddbd88;
+    opacity: .3;
+    border-radius: 5px;
+}
+
+.columnaChatDisponibles::-webkit-scrollbar-thumb:hover {
+    background-color: #ffaa33;
+}
+
+.columnaChatDisponibles::-webkit-scrollbar-thumb:active {
+    background-color: #ffbb66;
+}
+.accordion-content {
+    background-color: #f6f0f3;
+    color: #a2a2a2;
+    height: 280px;
+    margin-bottom: -280px;
+    margin-right: 0;
+    padding: 30px;
+    width: 100%;
+    min-height: 100%
+} 
+.claseChat.active{
+    font-size: 1.5em;
+    background: #f57905a2;
+    text-align: left;
+    display: flex;
+    border-radius: 20px;
+    height: 3em;
+    align-items: center;
+    margin-bottom: 5%;
+    cursor: pointer;
+    font-family: poppins;
+    width: 9em;
+}
+.claseChat{
+    font-size: 1.5em;
+    background: #f5790562;
+    text-align: left;
+    display: flex;
+    border-radius: 20px;
+    height: 3em;
+    align-items: center;
+    margin-bottom: 5%;
+    cursor: pointer;
+    font-family: poppins;
+    width: 9em;
+}
+.cantChats{
+    font-size: .7em;
+    justify-content: left;
+    margin-top: 7%;
+}
+.imagenChat{
+    width: auto;
+    height: 80%;
+    margin-right: 5%;
+    margin-left: 10%;
+}
+.myButton {
+	border-radius:20px;
+	display:inline-block;
+	cursor:pointer;
+	color:#070707;
+	font-family:poppins;
+	font-size:1em;
+	font-weight:bold;
+	padding:13px 48px;
+	text-decoration:none;
+    margin-bottom: 5%;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #6c7c7c 5%, #768d87 100%);
+	background-color:#6c7c7c;
+    color: white;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+/*-------- boton 3d  ------*/
+.scene {
+    width: 10em;
+    justify-content: center;
+    align-items: center;
+   }
+   
+   .cube {
+    color: #ccc;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    transition: all 0.85s cubic-bezier(.17,.67,.14,.93);
+    transform-style: preserve-3d;
+    transform-origin: 100% 50%;
+    width: 4em;
+    height: 4em;
+   }
+   
+   .cube:hover {
+    transform: rotateX(-90deg);
+   }
+   
+   .side {
+    box-sizing: border-box;
+    position: absolute;
+    display: inline-block;
+    height: 4em;
+    width: 10em;
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 1.5em;
+    font-weight: bold;
+   }
+   
+   .top {
+    background: wheat;
+    color: #222229;
+    transform: rotateX(90deg) translate3d(0, 0, 2em);
+    box-shadow: inset 0 0 0 5px #fff;
+   }
+   
+   .front {
+    background: #222229;
+    color: #fff;
+    box-shadow: inset 0 0 0 5px #fff;
+    transform: translate3d(0, 0, 2em);
+   }
+
+
+/*---------- columna Chat ---------*/
+.ColumnaChat{
+    flex-basis: 65%;
+    width: 100%;
+    height: 30em;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    z-index: 1;
+    flex-direction: column;
+}
+.ColumnaChat img{
+    opacity: .1;
+    width: 25%;
+    z-index: 0;
+    position: absolute;
+    right: 23%;
+    top: 20%;
+}
+/*------- Cuadro de Chat --------*/
+.zonaChat{
+    width: 80%;
+    height: 70%;
+    margin-bottom: 2%;
+    overflow: auto;
+}
+.zonaChat::-webkit-scrollbar {
+    width: 10px;
+    background-color: rgb(250, 249, 247);
+}
+
+.zonaChat::-webkit-scrollbar-thumb {
+    background-color: #f3ddbd88;
+    opacity: .3;
+    border-radius: 5px;
+}
+
+.zonaChat::-webkit-scrollbar-thumb:hover {
+    background-color: #ffaa33;
+}
+
+.zonaChat::-webkit-scrollbar-thumb:active {
+    background-color: #ffbb66;
+}
+.contenedorResultadoChat{
+    text-align: left;
+}
+.contenedorResultadoUsuario{
+    text-align: right;
+}
+.cuadroResultadoChat{
+    font-size: .8em;
+    background: #f579055b;
+    display: flex;
+    border-radius: 20px;
+    height: auto;
+    margin-bottom: 5%;
+    font-family: poppins;
+    width: auto;
+    padding: 2%;
+    display: inline-block;
+    text-align: left;
+}
+.cuadroResultadoUsuario{
+    font-size: .8em;
+    background: #05d9f55b;
+    display: flex;
+    border-radius: 20px;
+    height: auto;
+    margin-bottom: 5%;
+    font-family: poppins;
+    width: auto;
+    padding: 2%;
+    display: inline-block;
+    text-align: left;
+}
+/*------------zona de escritura y envio ------*/
+.zonaEscritura{
+    width: 90%;
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+    background: white;
+    border-radius: 100px;
+}
+.cuadroEscritura{
+
+    height: 2.5em;
+    width: 85%;
+    border-radius: 20px;
+    border: none;
+    font-size: 1em;
+    outline: none;
+}
+.btnEnviar{
+    background: #f57905;
+    border-radius: 20px;
+    font-size: 2em;
+    border: none;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding: 1%;
+    color: white;
+}
+.btnEnviar:hover{
+    transform: scale(1.2);
+}
+
