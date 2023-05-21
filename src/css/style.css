@@ -39,6 +39,9 @@ main{
   margin-top: 2%;
   display: none;
 }
+.contenedorLogo a{
+  cursor: pointer;
+}
 .contenedorLogo h1{
   display: inline-block;
   font-size: 4em;
@@ -263,29 +266,29 @@ main{
 
 /*-----------------ocultar y mostar menu--------------------*/
 @media screen and (max-width: 768px){
-    nav{
-        display: flex;
-        text-align: center;
-        align-items: center;
-    }
-    .contenedorLogo{
+  nav{
       display: flex;
-      justify-content: center;
-      width: 100%;
-      height: 10%;
-    }
-    .contenedorLogo img{
-      width: 50%;
-    }
-    .menuNavegacion{
-        display: none;
-    }
-    .navegacion{
-      opacity: 1;
-      pointer-events: auto;
-      visibility: hidden;
-    }
-}
+      text-align: center;
+      align-items: center;
+  }
+  .contenedorLogo{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 10%;
+  }
+  .contenedorLogo img{
+        width: 50%;
+  }
+  .menuNavegacion{
+    display: none;
+  }
+  .navegacion{
+    opacity: 1;
+    pointer-events: auto;
+    visibility: hidden;
+  }
+  }
 /*----------------------contenedorTextoPrincipal----------------*/
 
 .contenedorTextoPrincipal h2{
