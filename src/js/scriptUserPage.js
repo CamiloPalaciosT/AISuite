@@ -118,3 +118,59 @@ mensajeInput.addEventListener("keydown", function(event) {
     enviarMensaje();
     }
 });
+/*----menu Switch----*/
+function mostarMenu() {
+    var columnaChatDisponibles = document.querySelector('.columnaChatDisponibles');
+    columnaChatDisponibles.classList.toggle('open');
+  }
+// Función para cambiar el texto del botón a través de JavaScript
+function changeButtonText() {
+    var button1 = document.getElementById("btnAgregarCodigo");
+    var button2 = document.getElementById("btnAgregarCodigoDos");
+    var button3 = document.getElementById("btnAgregarCodigoTres");
+    var button4 = document.getElementById("btnAgregarCodigoCuatro");
+    var button5 = document.getElementById("btnAgregarCodigoCinco");
+    var anchoChat = document.getElementById("anchoChat")
+    
+    if (button1) {
+      button1.innerHTML = '<ion-icon name="person-add-outline"></ion-icon>';
+    }
+    
+    if (button2) {
+      button2.innerHTML = '<ion-icon name="person-add-outline"></ion-icon>';
+    }
+    
+    if (button3) {
+      button3.innerHTML = '<ion-icon name="person-add-outline"></ion-icon>';
+    }
+    
+    if (button4) {
+      button4.innerHTML = '<ion-icon name="person-add-outline"></ion-icon>';
+    }
+    
+    if (button5) {
+      button5.innerHTML = '<ion-icon name="person-add-outline"></ion-icon>';
+    }
+  }
+  
+  // Llamada a la función cuando se cumple el media query
+  if (window.matchMedia("(max-width: 768px)").matches) {
+    changeButtonText();
+  }
+
+  //redimension de ancho de columnas chat
+  var columnaChatDisponibles = document.querySelector('.columnaChatDisponibles');
+  var anchoChat = document.getElementById("anchoChat")
+
+  function actualizarMargen() {
+    if (columnaChatDisponibles.classList.contains('open')) {
+      anchoChat.style.marginRight = '6%';
+    } else {
+      anchoChat.style.marginRight = '0%';
+    }
+  }
+  actualizarMargen();
+  var observer = new MutationObserver(actualizarMargen);
+  observer.observe(columnaChatDisponibles, { attributes: true });
+  columnaChatDisponibles.classList.add('open');
+  columnaChatDisponibles.classList.remove('open');
