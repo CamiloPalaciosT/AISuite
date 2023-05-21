@@ -15,11 +15,11 @@
     <header>
         <nav>            
             <div class="contenedorLogo">
-            <img src=".src/img/logo.webp" alt="">  
-        </div>
+                <a href="./index.php"><img src="./src/img/logo.webp" alt=""></a> 
+            </div>
             <ul class="menuNavegacion">
                 <div class="aiSuite2">
-                    <img src="./src/img/logo.webp" alt="">
+                    <a href="./index.php"><img src="./src/img/logo.webp" alt=""></a>
                 </div>
                 <li class="cuadroNav"><a href="#primero">Inicio</a></li>
                 <li class="cuadroNav"><a href="#segundo">Descubre</a></li>
