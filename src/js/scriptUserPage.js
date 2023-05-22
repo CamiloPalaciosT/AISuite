@@ -24,6 +24,22 @@ function activarLink(event) {
 claseChat.forEach(function(item) {
     item.addEventListener('click', activarLink);
 });
+// funcion para cambiar el color a la web
+var colorOriginalClaseChat = "#f5790562";
+var colorOscuroClaseChat = "#15F5E8";
+
+function cambiarColor() {
+  var elementos = document.getElementsByClassName('claseChat');
+  
+  for (var i = 0; i < elementos.length; i++) {
+    if (window.getComputedStyle(elementos[i]).getPropertyValue("background-color") === colorOriginalClaseChat) {
+      elementos[i].style.backgroundColor = colorOscuroClaseChat;
+    } else {
+      elementos[i].style.backgroundColor = colorOriginalClaseChat;
+    }
+  }
+}
+
 // chatGPT
 const btnAgregarCodigo = document.getElementById("btnAgregarCodigo");
 const contenedorCodigo = document.getElementById("contenedorCodigo");
@@ -31,7 +47,7 @@ const ContadorChatGPT = document.getElementById("contadorChatGPT");
 let contador = 0;
 function agregarCodigoHTML() {
 contador ++;
-const codigoHTML = '<div class="scene"><div class="cube"><span class="side top">' +'chat No.'+  contador  + '</span><span class="side front">' +'chat No.'+  contador  + '</span></div></div>';
+const codigoHTML = '<div class="scene"><div class="cube"><span class="side top">' +'Chat '+  contador  + '</span><span class="side front">' +'Chat '+  contador  + '</span></div></div>';
 contenedorCodigo.innerHTML += codigoHTML;
 ContadorChatGPT.innerHTML = contador + " chats";
 }
@@ -43,7 +59,7 @@ const contadorBard = document.getElementById("contadorBard");
 let contadorDos = 0;
 function agregarCodigoHTMLDos() {
 contadorDos ++;
-const codigoHTMLDos = '<div class="scene"><div class="cube"><span class="side top">' +'chat No.'+  contadorDos  + '</span><span class="side front">' +'chat No.'+  contadorDos  + '</span></div></div>';
+const codigoHTMLDos = '<div class="scene"><div class="cube"><span class="side top">' +'Chat '+  contadorDos  + '</span><span class="side front">' +'Chat '+  contadorDos  + '</span></div></div>';
 contenedorCodigoDos.innerHTML += codigoHTMLDos;
 contadorBard.innerHTML = contadorDos + " chats";
 }
@@ -55,7 +71,7 @@ const contadorAIChat = document.getElementById("contadorAIChat");
 let contadorTres = 0;
 function agregarCodigoHTMLTres() {
 contadorTres ++;
-const codigoHTMLTres = '<div class="scene"><div class="cube"><span class="side top">' +'chat No.'+  contadorTres  + '</span><span class="side front">' +'chat No.'+  contadorTres  + '</span></div></div>';
+const codigoHTMLTres = '<div class="scene"><div class="cube"><span class="side top">' +'Chat '+  contadorTres  + '</span><span class="side front">' +'Chat '+  contadorTres  + '</span></div></div>';
 contenedorCodigoTres.innerHTML += codigoHTMLTres;
 contadorAIChat.innerHTML = contadorTres + " chats";
 }
@@ -67,7 +83,7 @@ const contadorQuizCat = document.getElementById("contadorQuizCat");
 let contadorCuatro = 0;
 function agregarCodigoHTMLCuatro() {
 contadorCuatro ++;
-const codigoHTMLCuatro = '<div class="scene"><div class="cube"><span class="side top">' +'chat No.'+  contadorCuatro  + '</span><span class="side front">' +'chat No.'+  contadorCuatro  + '</span></div></div>';
+const codigoHTMLCuatro = '<div class="scene"><div class="cube"><span class="side top">' +'Chat '+  contadorCuatro  + '</span><span class="side front">' +'Chat '+  contadorCuatro  + '</span></div></div>';
 contenedorCodigoCuatro.innerHTML += codigoHTMLCuatro;
 contadorQuizCat.innerHTML = contadorCuatro + " chats";
 }
@@ -79,7 +95,7 @@ const contadorSilky = document.getElementById("contadorSilky");
 let contadorCinco = 0;
 function agregarCodigoHTMLCinco() {
 contadorCinco ++;
-const codigoHTMLCinco = '<div class="scene"><div class="cube"><span class="side top">' +'chat No.'+  contadorCinco  + '</span><span class="side front">' +'chat No.'+  contadorCinco  + '</span></div></div>';
+const codigoHTMLCinco = '<div class="scene"><div class="cube"><span class="side top">' +'Chat'+  contadorCinco  + '</span><span class="side front">' +'Chat '+  contadorCinco  + '</span></div></div>';
 contenedorCodigoCinco.innerHTML += codigoHTMLCinco;
 contadorSilky.innerHTML = contadorCinco + " chats";
 }
@@ -174,3 +190,4 @@ function changeButtonText() {
   observer.observe(columnaChatDisponibles, { attributes: true });
   columnaChatDisponibles.classList.add('open');
   columnaChatDisponibles.classList.remove('open');
+
