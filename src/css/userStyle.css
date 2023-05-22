@@ -343,15 +343,15 @@ main{
     }
 }
 .myButton {
-	border-radius:20px;
-	display:inline-block;
-	cursor:pointer;
-	color:#070707;
-	font-family:poppins;
-	font-size:1em;
-	font-weight:bold;
-	padding:13px 48px;
-	text-decoration:none;
+    border-radius: 20px;
+    display: inline-block;
+    cursor: pointer;
+    color: #070707;
+    font-family: poppins;
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 13px 5px;
+    text-decoration: none;
     margin-bottom: 5%;
 }
 .myButton:hover {
@@ -362,6 +362,13 @@ main{
 .myButton:active {
 	position:relative;
 	top:1px;
+}
+#contenedorCodigo, #contenedorCodigoDos, #contenedorCodigoTres, #contenedorCodigoCuatro, #contenedorCodigoCinco{
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
 }
 /*-------- boton 3d  ------*/
 .scene {
@@ -377,7 +384,7 @@ main{
     transition: all 0.85s cubic-bezier(.17,.67,.14,.93);
     transform-style: preserve-3d;
     transform-origin: 100% 50%;
-    width: 4em;
+    width: 0em;
     height: 4em;
    }
    
